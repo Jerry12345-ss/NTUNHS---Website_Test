@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bootstrap Website</title>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="../Bootstrap/Website_style.css" rel="stylesheet" >
+
+        <!-- Bootstrap 4.6.0 version -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+        <!-- jQuery 3.6.0 version -->
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+
+        <!-- Bootstrap Icons|Font Awesome -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script type="text/javascript" src="../Bootstrap/Website_event.js"></script>
+    </head>
+
+    <body>  <!-- bootstrap navbar scroll fixed top => https://www.w3schools.com/bootstrap/bootstrap_scrollspy.asp -->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <!-- 如要更改 Navbar Background-Color，必須將 bg-light 屬性進行刪除 -->
+          <a href="http://localhost:8080/Bootstrap/Website.html"><img src="../Bootstrap/Picture/logo.png" id="logo" style="position: relative; left: 65px;"></a>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a href="#" id="link1">關於精誠</a>
+                <!--<div class="bottom-line" style="border-bottom: 1px solid blue; display: none;" id="line1"></div>-->
+              </li>
+              
+              <li class="nav-item dropdown" id="service-li"> <!-- 非常重要!! Link => https://www.jqueryscript.net/menu/Simplest-Dropdown-Navigation-With-jQuery-CSS.html-->
+                <a href="#" id="service-content">服務內容</a>
+                <ul>
+                  <li><a href="#">軟體開發</a></li>
+                  <li><a href="#" style="border-top: 1px solid rgb(168, 167, 167);">軟體代理</a></li>
+                  <li><a href="#" style="border-top: 1px solid rgb(168, 167, 167)">委外服務</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item dropdown" id="solution-li"> <!-- 非常重要!! Link => https://www.jqueryscript.net/menu/Simplest-Dropdown-Navigation-With-jQuery-CSS.html-->
+                <a href="#" id="solution">解決方案</a>
+                <ul>
+                  <li><a href="#">Analytics</a></li>
+                  <li><a href="#" style="border-top: 1px solid rgb(168, 167, 167);">Application</a></li>
+                  <li><a href="#" style="border-top: 1px solid rgb(168, 167, 167);">Database</a></li>
+                  <li><a href="#" style="border-top: 1px solid rgb(168, 167, 167);">Algorithm</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#">成功案例</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" id="link2">菁英招募</a>
+                <!--<div class="bottom-line" style="border-bottom: 1px solid blue; display: none;" id="line2"></div>-->
+              </li>
+              <li class="nav-item">
+                <a href="#">聯絡我們</a>
+              </li>
+            </ul>
+            <div>
+              <a href="#"><i class="fa fa-search" id="search"></i></a>
+            </div>
+            <div>
+              <a href="#"><i class="fa fa-globe" id="language"></i></a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section id="Search_overlay">
+          <!--
+          <div class="overlay_content">
+            <form action="">
+              <input type="text" placeholder="Seach..">
+              <button>Search</button>
+            </form>
+          </div>
+          </div>
+          -->
+        </section>
+
+        <section id="intro">
+          <div class="jumbotron">
+              <div class="container">
+                <div class="row"></div>
+                    <div class="col-md-12">
+                        <h1 style="color: white; width: fit-content;background-color: rgba(0,0,0,0.3);">Data Software Orchestration</h1>
+                        <h2 style="color: white;width: fit-content;background-color: rgba(0,0,0,0.3);">用科技力量幫企業成長</h2>
+                        <a class="btn btn-dark active" href="#" id="123">參與科技</a>
+                    </div>
+              </div>
+          </div>
+        </section>
+
+        <section id="update">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center" id="update_title">
+                最新消息
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="news">
+          <div id="carouselExampleIndicators" class="carousel" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <img src="../Bootstrap/Picture/1-11.jpg">
+                      </div>
+                      <div class="col-md-6 text-left">
+                        <h4>力推科技行善 精誠舉辦第二屆＂AI4SG Award＂鼓勵創新科技應用</h4>
+                        <p>【2021年02月04日，台北訊】科技的力量，能為社會帶來正向影響力！致力推動科技行善的台灣資訊服務產業龍頭精誠資訊，今（4）日揭曉第二屆＂Action Intelligence for Social Good Award, AI4SG＂獲獎組織／解決方案，包含：「海盛科技」、「真的假的Cofacts」、「阿龜微氣候」、「永訊智庫」以及「森思眼動」等5家組織。為鼓勵他們長期投入，持續為社會帶來正面…</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <img src="../Bootstrap/Picture/1-12.jpg">
+                      </div>
+                      <div class="col-md-6 text-left">
+                         <h4>【工商時報】企業合力提升偏鄉教育 素養品學堂 首辦教育松</h4>
+                         <p>【2021年1月26日，工商時報】如何培養臺灣的偏遠弱勢孩子成為未來人才？PaGamO素養品學堂今年攜手玉山銀行、精誠資訊、大江生醫、詠江教育基金會、王雲五基金會，啟動「未來素養學堂－偏鄉閱讀素養典範學校支持計畫」，並於日前（21日）於臺北市立復興高中首度針對舉辦「未來素養學堂教育松」。其中，共10所優勝學校獲頒「閱讀素養典範學校」殊榮，並媒合企業認養獲選學校年度教學資源，為偏鄉的教育與孩子創造無…</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <img src="../Bootstrap/Picture/1-13.png">
+                      </div>
+                      <div class="col-md-6 text-left">
+                         <h4>【經濟日報】精誠善用軟體力 強化人才競爭力</h4>
+                         <p>【2021年1月11日，經濟日報】精誠資訊是台灣資訊服務業龍頭，主要業務為系統整合(SI)，近期則邁向生態圈整合(XI)，以成為世界級的軟體公司為目標；除了企業營運規模持續擴大，精誠也善用自身軟體實力履行企業社會責任(CSR)，秉持著「善用軟體力讓社會更美好」的精神，充分發揮社會影響力。</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <img src="../Bootstrap/Picture/1-14.jpg">
+                      </div>
+                      <div class="col-md-6 text-left">
+                         <h4>8家AI新創入選精誠集團「AI＋新創加乘器計畫」</h4>
+                         <p>【2020年12月23日，台北訊】邁入第三年的精誠集團「AI+新創加乘器計畫」（AI+ Generator Program, AGP），今（2020）年度經過逾半年的評選階段，於10月下旬選出8家具國際發展潛力的AI新創加入計畫成員，這些新創皆有亮眼的成功案例，以及進軍國際市場的規劃與執行成績，包括已在全球吸引180萬人體驗的「維亞娛樂」，擁有多款100%自製大型VR產品；能6秒隔空測心跳與情緒反…</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <img src="../Bootstrap/Picture/1-15.jpg">
+                      </div>
+                      <div class="col-md-6 text-left">
+                         <h4>員工健康活力＝公司長期價值　精誠獲頒教育部體育署「運動企業」認證　</h4>
+                         <p>【2020年11月23日，台北訊】相信員工健康活力，是公司的長期價值，精誠集團透過舉辦三對三籃球賽、體適能課程、提供運動社團補助、打造健身房與多功能運動場、外聘運動指導員等方式，成功營造員工運動氛圍與習慣，獲教育部體育署頒發「運動企業」認證，認可精誠重視員工身心靈健康的作為。養成員工運動習慣只是第一步，精誠接下來還計劃聘請專任運動指導員駐點公司內部健身場館，為員工傳遞正確的運動觀念，也計劃舉辦各項…</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <img src="../Bootstrap/Picture/1-16.jpg">
+                      </div>
+                      <div class="col-md-6 text-left">
+                        <h4>獲多家國際大廠認證 瞄準全球市場 GARAOTUS 專注融合AI及HPC雲端技術</h4>
+                        <p>【2020年11月18日，台北訊】精誠資訊推出整合AI、HPC ( High Performance Computing）、雲端等高端技術的雲端服務品牌GARAOTUS，未來結合精誠深耕行業多年的服務能量與生態圈資源，初期鎖定日本、韓國、香港及新加坡等亞洲高度發展的國家與地區，協助基因工程等需大量且快速計算資源的醫療組織與政府機構加速研發計畫發展，未來也計劃將觸角深入北美等地區。目前已成功與香港研…</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="trend">
+          <div class="jumbotron">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12" id="trend_title">
+                  精誠動向
+                </div>
+                <div class="col-md-4" id="test-border">
+                  <div class="card" style="width: 18rem;">
+                    <img src="../Bootstrap/Picture/technology.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title text-center" style="font-weight: bold;">科技講堂</h4>
+                      <p class="card-text text-center">線上分享數位轉型AI化最新應用案例</p>
+                      <div class="col-md-12 text-center">
+                        <a href="#" class="btn btn-primary">點擊查看</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4" id="test-border">
+                  <div class="card" style="width: 18rem;">
+                    <img src="../Bootstrap/Picture/buildings.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title text-center" style="font-weight: bold;">新聞中心</h4>
+                      <p class="card-text text-center">提供最新消息、分享媒體報導與媒體聯絡窗口</p>
+                      <div class="col-md-12 text-center">
+                        <a href="#" class="btn btn-primary">點擊查看</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4" id="test-border">
+                  <div class="card" style="width: 18rem;">
+                    <img src="../Bootstrap/Picture/people_discuss.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title text-center" style="font-weight: bold;">行銷活動</h4>
+                      <p class="card-text text-center">這裡可以獲得活動新知，輕鬆掌握最新科技趨勢</p>
+                      <div class="col-md-12 text-center">
+                        <a href="#" class="btn btn-primary">點擊查看</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="summary">
+          <div class="background">
+            <img src="../Bootstrap/Picture/abstract-blue-circle.jpg" id="first-picture">
+            <img src="../Bootstrap/Picture/abstract-blue-color-round.jpg" id="second-picture">
+            <img src="../Bootstrap/Picture/circle-dot-technology-logo.jpg" id="third-picture">
+            <div class="container">
+              <div class="row"> 
+                <div class="col-md-7">
+                  <!--<h3>整合數據經濟生態圈，扮演「領導協奏者」的角色</h3>-->
+                  <!--<h5>運用「軟體力」與「數據力」幫客戶增值「行銷力」</h5>-->
+                  <h3>提供專業資訊技術服務，並善盡「企業社會責任」</h3>
+                  <h5>核心價值 : 專業、準時、服務、創新</h5>
+                  <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-3" id="straight-line"></div>
+                    <div class="col-md-9"> <!-- 精誠資訊SYSTEX Corporation -->
+                      <p id="one-para">精誠成立於1997年，是台灣資訊服務產業龍頭企業，以5A (AP、APP、API、Appliance、Algorithm) 跨界軟體能力，以及上雲、用雲、管雲、護雲等4C雲服務為核心技術，培育、發掘指數型技術人才與團隊，在雲端管理數據服務與軟體應用；集合兩岸三地超過1500位的軟硬體技術研發團隊，幫助企業客戶經營用戶與消費者體驗，發展不同產業的情境應用、體驗設計、場景互動、數據整合，提供用戶行為軌跡精準行銷與服務。</p>
+                      <p id="two-para">以行業為服務面向深耕產業客戶，積累紮實領域知識，並連結生態圈夥伴力量，領導協奏，提供跨界跨業異質平台數據整合服務，展現在智慧製造、智慧金融、智慧醫療、智慧服務、智慧政府與智慧城市等領域。</p>
+                    </div>
+                  </div>
+                  <a class="btn btn-outline-primary" href="#" style="width: 180px; height: 40px; margin-top: -10px; margin-left: 40px;">View&ensp;More</a>
+                </div>
+                <div class="col-md-5">
+                  <img src="../Bootstrap/Picture/coporate.jpg">
+                  <div id="circle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="service">
+          <div class="jumbotron">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center" id="service_title">
+                  服務內容
+                </div>
+                <div>
+                  <p id="one-para">精誠因應客戶不同的人力需求能提供經驗豐富的程式設計師以協助客戶進行專案開發的工作；客戶可藉由面試來挑選出最適合的人選以配合專案時程及技能要求。</p>
+                  <p id="two-para">精誠擁有優良的專業團隊能提供技術與專案管理內訓，進而持續提升程式設計師的技能。</p>
+                </div>
+                <a href="#" class="btn btn-dark" style="margin-left: 515px;">View&ensp;More</a>
+              </div>
+              <!--
+              <div class="row">
+                <div class="col-md-4">
+                  <img src="../Bootstrap/Picture/test2.png" style="height: 500px; width: 500px; position: relative; top: 45px; right: 210px;">
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                  <img src="../Bootstrap/Picture/test1.png" style="height: 500px; width: 500px; position: relative; top: 45px; left: 53px;">
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+        </section>
+        
+        <section id="partner">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center" id="partner_title">
+                合作夥伴
+              </div>
+            </div>
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row"> <!-- several pictures or items into the  same carousel-item ( 弄成列row的模式即可 ) => https://www.codeply.com/go/zjZsn1ly29 -->
+                    <div class="col-md-2" >
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-acunetix.jpg" ></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-nutanix-407-ud.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-HITACHI.png"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-Infoblox.png"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-synology.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-cisco.jpg"></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-VMware2.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-microsoft2.png"></a>
+                    </div>  
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-darktrace2.png"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-adobe.png"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-MobileIron.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-Flexera2.jpg"></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-20170401041652_34.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-mcafee.png"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-palo-alto.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-a95eeb8a1eaaa55e58f5cd23ba922d30045f8b48.jpg"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-thales2.png"></a>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="../Bootstrap/Picture/Logo/logo-netapp.jpg"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+              <a class="btn btn-outline-primary" href="#" style="width: 180px; height: 40px; margin-left: 671px; margin-top: 95px;">View&ensp;More</a>
+        </section>
+
+        <a id="back-to-top" href="#" class="btn btn-dark back-to-top" style="display: none;"><i class="fa fa-chevron-up"></i></a> <!-- Bootstrap scroll top button => https://codepen.io/michalwyrwa/pen/GBaPPj-->
+        
+      </main>
+
+      <section id="bottom">
+        <div class="jumbotron-fluid">
+          <div class="container">
+            <div class="row">
+                
+              <div class="col-md-3">
+                <div class="title">
+                  網站地圖
+                </div>
+                <div class="bottom-information">
+                  <div style="line-height: 35px;"><a href="#">&ensp;關於精誠</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;媒體中心</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;服務內容</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;解決方案</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;成功案例</a></div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="title">
+                  企業永續發展
+                </div>
+                <div class="bottom-information">
+                  <div style="line-height: 35px;"><a href="#">&ensp;永續發展與管理</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;幸福職場</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;營運環境永續</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;社會共融</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;利害關係人專區</a></div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="title">
+                 投資人專區
+                </div>
+                <div class="bottom-information">
+                  <div style="line-height: 35px;"><a href="#">&ensp;公司基本資料</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;財務業務資訊</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;股利及股價查詢</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;股東會資訊</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;投資人關係聯絡窗口</a></div>
+                  <div style="line-height: 35px;"><a href="#">&ensp;Investors</a></div>
+                </div>
+              </div>
+              <div class="col-md-3"> 
+                <div class="title">
+                  CONNECT WITH SYSTEX
+                </div>
+                <div class="bottom-information" style="position: relative; left: 2px; top: 35px;">
+                  <a href="https://www.facebook.com/systextaiwan/"><img src="../Bootstrap/Picture/facebook-circle.png"></a>
+                  <a href="https://www.instagram.com/systex.taiwan/"><img src="../Bootstrap/Picture/ig-circle.png"></a>
+                  <a href="https://www.youtube.com/channel/UC5UuexTB9cVE77XSGFJ03gg"><img src="../Bootstrap/Picture/youtube-circle.png"></a>
+                  <a href="https://tw.linkedin.com/company/systex"><img src="../Bootstrap/Picture/linkedin-circle.png"></a>
+                </div>
+                <div class="contact-information"> <!-- Add phone number link href => https://km.nicetypo.com/doc/0bd95b20d767583d3d89711f52e4b3bf -->
+                  <div style="line-height: 35px;"><i class="fa fa-caret-right" style="position: relative; font-size: 17px; margin-right: 8px;"></i>電話 : <a href="tel:+886-2-23686171">(02)2368-6171</a></div>
+                  <div style="line-height: 35px; position: relative; left: 59px;"><a href="tel:+886-2-77201888">(02)7720-1888</a></div> 
+                  <div style="line-height: 35px;"><i class="fa fa-caret-right" style="position: relative; font-size: 17px; margin-right: 8px;"></i>Email : <a href="mailto:jerry81325@yahoo.com.tw">jerry81325@yahoo.com.tw</a></div>
+                  <!-- Add email link href => https://www.w3schools.com/tags/tag_address.asp-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="condition"> 
+        <div class="jumbotron-fluid">
+          <div class="row">
+            <div style="font-size: 14px; position: relative; top: 12px; margin-left: 140px;">
+              © Copyright 2021  SYSTEX 精誠資訊(作品測試用途). All Rights Reserved.
+            </div>
+            <div style="position: relative; top: 12px; margin-left: 635px;"><a href="#">隱私權政策</a> &ensp;|&ensp; <a href="#">服務條款</a></div>
+          </div>
+        </div>
+      </footer>
+      <script>
+        /*
+        // 此處功能為當滑鼠移入至選單標題時，標題文字底下會出現底線，如移開則會消失 => https://medium.com/@shizukuichi/mouse-event-%E5%B0%8F%E7%AD%86%E8%A8%98-feb5dd866b0
+        var link1 = document.getElementById("link1");
+        var link2 = document.getElementById("link2");
+
+        link1.addEventListener("mouseenter",Show); // mouseenter : 滑鼠移入時會觸發的事件
+        link1.addEventListener("mouseleave",Hide); // mouseleave : 滑鼠離開時會觸發的事件
+
+        link2.addEventListener("mouseenter",Show2);
+        link2.addEventListener("mouseleave",Hide2);
+
+        function Show(){
+            $("#line1").fadeIn(100);
+        }
+        function Hide(){
+            $("#line1").fadeOut(100);
+        }  
+        function Show2(){
+            $("#line2").fadeIn(100);
+        }
+        function Hide2(){
+            $("#line2").fadeOut(100);
+        }   
+        */  
+        var search = document.getElementById("search");
+
+        search.addEventListener("click",Show);
+
+        function Show(){
+          $("#test").fadeIn("quick");
+        }
+      </script>
+    </body>
+</html>
+
+<!--
+  訊連(威力導演):https://tw.cyberlink.com/
+  昕立資訊:https://www.tpisoftware.com/
+  碩誠國際:https://www.serlinkin.com/
+  LOGIC:https://www.logicsolutions.com.tw/
+  SUPER 8:https://www.no8.io/
+-->
+
+<!--
+  ‧Size Question of Font-Awesome Icons 
+-->

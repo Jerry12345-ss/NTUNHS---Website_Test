@@ -1,0 +1,497 @@
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p,a,label,textarea{
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    transition: height 0.3s;
+}
+
+nav ul {    /* 讓 dropdown-item 的 ul li 對齊 navbar 的選單文字 */
+    margin: 0; 
+    padding: 0;
+}
+  
+nav #logo{
+    height: 73px; 
+    width: 280px; 
+}
+
+nav .nav-item{
+    font-size: 18px;
+    margin: 0px 10px;   /* https://www.w3schools.com/css/css_margin.asp */
+    position: relative;
+    left: 270px;
+    display: inline-block; /* 先解釋 block 與 inline-block 的差異 => 如果用block，會讓每個.nav-item變成一整橫行的版面，如果用inline-block，會讓每個.nav-item自成一個小block ( 可用測試檔案對此屬性進行刪除試試差異 ) */
+    /* Link => https://www.w3schools.com/cssref/pr_class_display.asp */
+    /* 雖然此屬性有刪 or 無刪是沒有差異的，但因為使用內建的 .nav-item，可能導致此屬性的設定為 inline-block，不然正常沒有設定的狀況為 block */
+}
+
+nav .nav-item a{          /* make navbar background-color to fill full height => https://stackoverflow.com/questions/44578301/navbar-pills-color-in-bootstrap-4-to-fill-full-height/44662668*/
+    color: dimgray;
+    display: block;       /* 此處一定要加block，不然此處的padding會無效 ( 可試試將此屬性進行刪除後的差異 ) */
+    padding-top: 28px;    /* 增加內文對上下的padding */
+    padding-bottom: 26px;
+    padding-right: 14px;
+    padding-left: 14px;
+    /* transition: 0.3s linear; => 此屬性能將 Navbar Height 80px 降至 65px 時的轉場時間設定為0.3s */ 
+    text-decoration: none;  /* remove underline of Hyperlink (<a>) */
+}
+
+nav .nav-item:hover{  
+    font-weight: bold;
+    background-color: rgb(91, 155, 155);
+}
+
+nav .nav-item a:hover{
+    color: white;
+}
+
+nav .dropdown ul{
+    border-bottom: 4px solid rgb(91, 155, 155);
+    display: none;    /* 此處要加，不然重新整理 or 一開始會出現 ( 如是用套件裡的 dropdown-menu / dropdown-item 即可不用加，因為內部已設定好了 )*/
+    position: absolute;
+    width: 200px;
+}
+
+nav .dropdown ul li{
+    /* 此處不加 border-top 是因為有些許地方會出現空隙 */
+    display: block;  /* 如先前說明的，自成一個區塊*/
+    background-color: #5f5f5f; 
+}
+
+nav .dropdown ul li a{
+    color: white;
+    font-weight: initial;
+    display: block;  /* 此處一定要加block，不然此處的padding會無效 ( 可試試將此屬性進行刪除後的差異 ) */
+    padding: 8px 16px;
+}
+
+nav .dropdown ul li a:hover{
+    color: white;
+    font-weight: bold;
+    background: rgb(140, 189, 189);
+}
+
+/*
+.shrink{
+    height: 65px; // 此處的功能為當滾輪移動時，Navbr的高度從80px降至65px
+}
+
+.shrink-padding{
+    padding-bottom: 10px !important;
+}
+*/
+
+nav .fa-search{
+    color: dimgray;
+    font-size: 22px;
+    position: relative;
+    right: 140px;
+}
+
+nav .fa-search:hover{
+    color: rgb(91, 155, 155);
+}
+
+nav .fa-globe{
+    color: dimgray;
+    font-size: 22px;
+    position: relative;
+    right: 80px;
+}
+
+nav .fa-globe:hover{
+    color: rgb(91, 155, 155);
+}
+
+#intro .jumbotron{
+    height:100vh;
+    background-image: url("../Bootstrap/Picture/ai.jpg");
+    background-size: 1600px 100vh;
+    margin-bottom: 20px;
+}
+
+#intro h1{
+    font-size: 52px;
+    line-height: 1.5;
+}
+
+#intro .container{     /* https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-element-for-all-browsers-using-css */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); /* transform : 改變可視化格式模型的空間維度，能讓所選取之元素平移、縮放、傾斜和旋轉 */
+}   /* translateY(-50%) => 往Y軸平移50%(向上) */
+
+
+#update #update_title{   
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;  
+    color: dimgray;
+    margin: 8px 0px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#update #update_title::before,
+#update #update_title::after{
+    content: "";          
+    flex-grow: 1;
+    background: lightgray;
+    height: 2px;
+    line-height: 0px;
+    margin: 0px 15px;
+}
+
+#news .container{
+    border: 1px solid lightgray;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    max-width: 1300px; /* 自訂義container width => https://pjchender.blogspot.com/2017/10/bs-bootstrap-4-custom-container-and.html */
+    width: 1300px;
+}
+
+#news img{
+    width: 612px;
+    height: 350px;
+    margin: 30px 12px;
+} 
+
+#news h4{
+    margin-top: 30px;
+    margin-bottom: 13px;
+    margin-right: 70px;
+}
+
+#news p{
+    color: dimgray;
+    margin-right: 50px;
+    text-align: justify; /* 置中對齊 */
+}
+
+#news .carousel-indicators li{
+    width: 53px;
+    height: 10px;
+    border-radius: 15px;
+    background-color: dimgray;
+    margin: 0px 5px;
+    margin-bottom: 50px;
+    position: relative;   /* li 靠right => https://stackoverflow.com/questions/48311855/how-to-position-carousel-indicators-in-bootstrap-4/48332134 */
+    left: 450px;
+}
+
+#news .carousel-indicators .active{
+    background-color: red;
+}
+
+#trend .jumbotron{
+    height: 72vh;
+    background-image: linear-gradient(rgba(105,105,105,0.93),rgba(105,105,105,0.93)),url("../Bootstrap/Picture/dots_background.jpg");
+}
+
+#trend #trend_title{   
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;  /* Add centered text to the middle <hr> => https://stackoverflow.com/questions/2812770/add-centered-text-to-the-middle-of-a-hr-like-line?page=1&tab=votes#tab-top */
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#trend #trend_title::before,
+#trend #trend_title::after{
+    content: "";          /* Add centered text to the middle */
+    flex-grow: 1;
+    background: white;
+    height: 2px;
+    line-height: 0px;
+    margin: 0px 15px;
+}
+
+.card{
+    margin: 20px auto;  /* bootstrap card center => https://stackoverflow.com/questions/39031224/how-to-center-cards-in-bootstrap-4 */
+    float: none;
+    margin-bottom: 10px;
+}
+
+.card-img-top{
+    width: 100%;    /* img-top to the same height/width => https://stackoverflow.com/questions/37287153/how-to-get-images-in-bootstraps-card-to-be-the-same-height-width */
+    height: 23vh;
+    object-fit: cover;
+}
+
+#summary .background #first-picture{
+    height: 200px;
+    width: 200px;
+    opacity: 50%;
+    position: relative;
+    left: -40px;
+    bottom: 20px;
+}
+
+#summary .background #second-picture{
+    height: 150px;
+    width: 150px;
+    opacity: 50%;
+    position: relative;
+    float: right;  /* 往最右邊靠 */
+    bottom: 30px;
+}
+
+#summary .background #third-picture{
+    height: 100px;
+    width: 100px;
+    opacity: 50%;
+    position: relative;
+    float: right;
+    top: 150px;
+    left: 60px;
+}
+
+#summary .container{
+    margin-top: -180px;
+    margin-bottom: 30px;
+}
+
+#summary h3{
+    color: midnightblue;
+    font-weight: 550;
+    margin-top: -10px;
+}
+
+#summary h5{
+    color: midnightblue;
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+#summary #straight-line{
+    border-left: 2px solid dimgray;
+    height: 250px;
+    margin-left: 17px;
+}
+
+#summary #one-para{
+    margin: 30px;
+    margin-top: -250px;
+    margin-right: -150px;
+    margin-left: 40px;
+    text-align: justify;
+}
+
+#summary #two-para{
+    margin: 30px;
+    margin-right: -150px;
+    margin-left: 40px;
+    text-align: justify;
+}
+
+#summary img{
+    height: 410px;
+    width: 410px;
+    border-radius: 50%;
+}
+
+#summary #circle{
+    border: 4px solid royalblue;
+    height: 415px;
+    width: 415px;
+    border-radius: 50%;
+    margin-top: -413px;
+    margin-left: 30px;
+}
+
+#service .jumbotron{
+    margin-top: 50px;
+    height: 115vh;
+    background-image: linear-gradient(rgba(173,216,230,0.5),rgba(0,0,0,0.5)),url("../Bootstrap/Picture/service-background.jpg");
+    background-size: 100% 100%;
+}
+
+#service #service_title{   
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;  
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#service #service_title::before,
+#service #service_title::after{
+    content: "";          
+    flex-grow: 1;
+    background: white;
+    height: 2px;
+    line-height: 0px;
+    margin: 0px 15px;
+}
+
+#service #one-para{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 70px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 18px;
+    text-align: center;
+}
+
+#service #two-para{
+    margin-top: 30px;
+    margin-left: 230px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 18px;
+}
+
+#partner #partner_title{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;  
+    color: midnightblue;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#partner #partner_title::before,
+#partner #partner_title::after{
+    content: "";          
+    flex-grow: 1;
+    background: midnightblue;
+    height: 2px;
+    line-height: 0px;
+    margin: 0px 15px;
+}
+
+#partner .container{
+    max-width: 1350px;
+ }
+ 
+ #partner .carousel-indicators li{
+     border-radius: 50%;
+     width: 10px;
+     height: 10px;
+     background-color: dimgray;
+     position: relative;
+     top: 90px;
+ }
+
+ #partner .carousel-indicators .active{
+   background-color: midnightblue;
+}
+
+#partner .carousel-control-next-icon{
+    height: 50px;
+    width: 30px;
+    margin-right: -250px;
+    background-color: dimgray;
+}
+
+#partner .carousel-control-prev-icon{
+    height: 50px;
+    width: 30px;
+    margin-left: -280px;
+    background-color: dimgray;
+}
+
+#partner .col-md-2 img{
+    width: 180px;
+    height: 75px;
+    border: 1px dashed black;
+    border-radius: 10px;
+}
+
+#back-to-top{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+#back-to-top:hover{
+    background-color: rgb(91, 155, 155);
+    border-color: rgb(91, 155, 155);
+}
+
+#bottom .jumbotron-fluid{
+    height: 46vh; 
+    margin-top: 50px;
+    background-color: rgba(204, 202, 202, 0.6); /* rgba(220, 220, 220, 0.6)*/
+}
+
+#bottom .container{
+    max-width: 1300px;
+    position: relative;
+    top: 30px;
+}
+
+#bottom .title{
+    position: relative;
+    top: 18px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#bottom .bottom-information{
+    position: relative;
+    top: 30px;
+    right: 8px;
+    font-size: 17px;
+}
+
+#bottom .bottom-information a{
+    font-size: 17px;
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+
+#bottom .bottom-information a:hover{
+    color: rgb(201, 5, 5); 
+}
+
+#bottom .bottom-information img{
+    height: 40px;
+    width: 40px;
+}
+
+#bottom .contact-information{
+    position: relative;
+    top: 60px;
+}
+
+#bottom .contact-information a{
+    font-size: 17px;
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+
+#bottom .contact-information a:hover{
+    color: rgb(201, 5, 5);
+}
+
+#condition .jumbotron-fluid{
+    width: 1500px;
+    background-color: white;
+    height: 7vh;
+}
+
+#condition a{
+    font-size: 14px;
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+
+#condition a:hover{
+    color: rgb(201, 5, 5);
+}
+
+

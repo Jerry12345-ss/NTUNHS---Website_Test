@@ -1,0 +1,71 @@
+/*
+.col-md-3{
+    display: inline-block;
+    margin-left:-4px;
+}
+
+.col-md-3 img{
+    width:100%;
+    height:auto;
+}
+  
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+     background-color:red;
+}
+*/
+
+/*
+ html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    user-select: none;
+    cursor: pointer;
+    font-size: 50px;
+}
+*/
+
+/*
+.navbar-custom{
+    background-color: #ff5500;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+
+.navbar-custom .navbar-nav .nav-link{
+    color: rgba(255,255,255,.5);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.navbar-custom .nav-item:hover .nav-link{
+    color: red;
+    background-color: #333;
+}
+
+.navbar-custom .dropdown-menu{
+    background-color: #ff5500;
+}
+
+.navbar-custom .dropdown-item{
+    color: #ffffff;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus{
+    color: #333333;
+    background-color: rgba(255,255,255,.5);
+}
+*/
+

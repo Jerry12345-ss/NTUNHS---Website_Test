@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-0"> <!-- 此處的 py-0 極為重要(make background color of navabar to full height) => https://www.codeply.com/go/CzhP1QKxnW/bootstrap-4-change-navbar-link-background-color-->
+              <a href="http://localhost:8080/Bootstrap/test.html"><img src="../../Bootstrap/Picture/logo.png" id="logo" style="position: relative; left: 65px;"></a>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="link1">關於精誠</a>
+                    <!--<div class="bottom-line" style="border-bottom: 1px solid blue; display: none;" id="line1"></div>-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="link2">媒體中心</a>
+                    <!--<div class="bottom-line" style="border-bottom: 1px solid blue; display: none;" id="line2"></div>-->
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      服務內容
+                    </a>
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" href="#" style="border-bottom: 1px solid gainsboro; border-top: 3px solid deepskyblue;">委外服務</a>
+                      <a class="dropdown-item" href="#" style="border-bottom: 1px solid gainsboro;">軟體代理</a>
+                      <a class="dropdown-item" href="#">軟體開發</a>
+                    </div>
+                    <!--
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">委外服務</a>
+                      <a class="dropdown-item" href="#">軟體代理</a>
+                      <a class="dropdown-item" href="#">軟體開發</a>
+                      <div class="dropdown-divider"></div>
+                         <a class="dropdown-item" href="#">其他...</a>
+                    </div>
+                    -->
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      解決方案
+                    </a>
+                    <div class="dropdown-content">
+                      <a class="dropdown-item" href="#" style="border-bottom: 1px solid gainsboro; border-top: 3px solid deepskyblue;">Analytics</a>
+                      <a class="dropdown-item" href="#" style="border-bottom: 1px solid gainsboro;">Application</a>
+                      <a class="dropdown-item" href="#" style="border-bottom: 1px solid gainsboro;">Database</a>
+                      <a class="dropdown-item" href="#">Algorithm</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">成功案例</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">聯絡我們</a>
+                  </li>
+                </ul>
+                <!--
+                <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                -->
+                <div>
+                  <a href="#"><img src="../Bootstrap/Picture/search_icon.png" style="height: 25px; width: 25px;position: relative; right: 100px;"></a>
+                </div>
+                <div>
+                  <a href="#"><img src="../Bootstrap/Picture/language.png" style="height: 25px; width: 25px;position: relative; right: 70px;"></a>
+                </div>
+              </div>
+            </nav>
