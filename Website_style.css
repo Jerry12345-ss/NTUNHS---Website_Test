@@ -35,7 +35,7 @@ nav .nav-item{
 }
 
 nav .nav-item a{          /* make navbar background-color to fill full height => https://stackoverflow.com/questions/44578301/navbar-pills-color-in-bootstrap-4-to-fill-full-height/44662668*/
-    color: dimgray;
+    color: gray;
     display: block;       /* 此處一定要加block，不然此處的padding會無效 ( 可試試將此屬性進行刪除後的差異 ) */
     padding-top: 28px;    /* 增加內文對上下的padding */
     padding-bottom: 26px;
@@ -46,7 +46,7 @@ nav .nav-item a{          /* make navbar background-color to fill full height =>
 }
 
 nav .nav-item:hover{  
-    font-weight: bold;
+    font-weight: 600;
     background-color: rgb(91, 155, 155);
 }
 
