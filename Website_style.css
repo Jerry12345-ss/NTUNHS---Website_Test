@@ -46,7 +46,7 @@ nav .nav-item a{          /* make navbar background-color to fill full height =>
 }
 
 nav .nav-item:hover{  
-    font-weight: bold;
+    font-weight: 600;
     background-color: rgb(91, 155, 155);
 }
 
